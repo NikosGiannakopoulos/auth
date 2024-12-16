@@ -54,9 +54,9 @@ const LoginForm = () => {
       backButtonHref={"/register"}
       showSocial
     >
-      <Form {...form}>
+      <Form {...form} >
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <div>
+          <div className="flex flex-col gap-y-2">
             <FormField
               control={form.control}
               name='email'
@@ -95,7 +95,7 @@ const LoginForm = () => {
             />
           </div>
           {alert && <FormAlert type={alert.type} message={alert.message} />}
-          <Button disabled={isPending} type='submit' className='w-full'>
+          <Button disabled={isPending} type='submit' className='w-full mt-4'>
             Login
           </Button>
         </form>
